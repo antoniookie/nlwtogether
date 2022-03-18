@@ -1,6 +1,6 @@
 import React from "react";
-import { SignIn } from "../gameplay/src/screens/Signin";
-import { Home } from "../gameplay/src/screens/Home";
+import { SignIn } from "../nlwtogether/src/screens/Signin";
+import { Home } from "../nlwtogether/src/screens/Home";
 import { useFonts } from "expo-font";
 import { Inter_400Regular, Inter_500Medium } from "@expo-google-fonts/inter";
 import { StatusBar } from "react-native";
@@ -9,7 +9,8 @@ import {
   Rajdhani_700Bold,
 } from "@expo-google-fonts/rajdhani";
 import AppLoading from "expo-app-loading";
-import { Background } from "../gameplay/src/components/Background";
+import { Background } from "../nlwtogether/src/components/Background";
+import { Routes } from "./src/routes";
 
 export default function App() {
   const [fontIsLoaded] = useFonts({
@@ -24,13 +25,15 @@ export default function App() {
   }
 
   return (
+    <>
     <Background>
       <StatusBar
         barStyle="light-content"
         backgroundColor="transparent"
         translucent={true}
       />
-      <Home />
-    </Background>
+      <Routes />
+      </Background>
+      </>
   );
 }
