@@ -25,7 +25,6 @@ export default function App() {
   }
 
   return (
-    <>
     <Background>
       <StatusBar
         barStyle="light-content"
@@ -34,6 +33,5 @@ export default function App() {
       />
       <Routes />
       </Background>
-      </>
   );
 }
